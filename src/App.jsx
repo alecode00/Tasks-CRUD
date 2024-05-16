@@ -1,12 +1,14 @@
-import { NavBar } from "./NavBar";
-
+import { NavBar } from "./components/NavBar";
+import { ThemeProvider } from "./components/contextComponent/ThemeContext";
 
 function App() {
   return (
     <>
-     <NavBar />
+      <ThemeProvider>
+        <NavBar />
+      </ThemeProvider>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

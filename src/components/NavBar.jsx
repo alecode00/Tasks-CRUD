@@ -1,8 +1,9 @@
-import { /* useContext, */ useState } from "react";
+import { useContext, useState } from "react";
 import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
-/* import ThemeContext from "../context/ThemeContext"; */
-import { MainBoard } from "./MainBoard";
-import { AddTasks } from "./AddTasks";
+import ThemeContext from "../components/contextComponent/ThemeContext";
+import { MainBoard } from "./navbarComponents/MainBoard";
+import { AddTasks } from "./navbarComponents/AddTasks";
+import "../assets/styles/navbar.css";
 
 const initialTasks = [
   {
@@ -16,6 +17,7 @@ const initialTasks = [
 ];
 export const NavBar = () => {
   const [tasks, setTasks] = useState(initialTasks);
+  const { theme, handleTheme } = useContext(ThemeContext);
 
   const handleSetTasks = (newTask) => {
     setTasks([...tasks, newTask]);
@@ -32,15 +34,22 @@ export const NavBar = () => {
     );
   };
   const handleDeleteTask = (itemNumber) => {
-    setTasks(tasks.filter((task,i) => itemNumber !== i));
+    setTasks(tasks.filter((task, i) => itemNumber !== i));
+  };
+  const handleOnClick = () => {
+    if (theme === "light") {
+      handleTheme("dark");
+    } else {
+      handleTheme("light");
+    }
   };
 
   return (
     <>
-      <header>
+      <header className={theme}>
         <BrowserRouter>
-          <div>
-            <section>
+          <div className="containerHeader">
+            <section className="containerHeaderLeft">
               <NavLink
                 className={({ isActive }) => (isActive ? "active" : null)}
                 to="/"
@@ -51,11 +60,14 @@ export const NavBar = () => {
                 className={({ isActive }) => (isActive ? "active" : null)}
                 to="/add"
               >
-                Add Tasks
+                Add
               </NavLink>
             </section>
             <section>
-              <h3>Welcome</h3>
+              <h3>My Tasks List</h3>
+            </section>
+            <section>
+              <button onClick={handleOnClick}>Change Mode</button>
             </section>
           </div>
 
@@ -63,16 +75,22 @@ export const NavBar = () => {
             <Route
               path="/"
               element={
-                <MainBoard
-                  tasks={tasks}
-                  handleIsDoneTask={handleIsDoneTask}
-                  handleDeleteTask={handleDeleteTask}
-                />
+                <div className="pageContainer">
+                  <MainBoard
+                    tasks={tasks}
+                    handleIsDoneTask={handleIsDoneTask}
+                    handleDeleteTask={handleDeleteTask}
+                  />
+                </div>
               }
             />
             <Route
               path="/add"
-              element={<AddTasks handleSetTasks={handleSetTasks} />}
+              element={
+                <div className="pageContainer">
+                  <AddTasks handleSetTasks={handleSetTasks} />
+                </div>
+              }
             />
           </Routes>
         </BrowserRouter>

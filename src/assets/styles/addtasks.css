@@ -1,0 +1,34 @@
+button#addButton {
+  padding: 1% 0.5%;
+  margin-top: 2%;
+  width: 50%;
+  border-radius: 20px;
+  background-color: var(--color-hardBlack-hardWhite);
+  cursor: pointer;
+  transition: border-color 0.25s;
+  border: 1.75px solid var(--color-hardBlack-hardWhite);
+  color: var(--color-easyBlack-easyBlack);
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+}
+button#addButton:hover {
+  border-color: var(--color-easyBlack-easyBlack);
+}
+.input {
+  align-items: center;
+  padding: 2%;
+  border-radius: 20px;
+  background-color: var(--color-hardBlack-white);
+  color: var(--color-easyBlack-easyBlack);
+  input {
+    padding: 0;
+    margin: 0;
+    color: var(--color-white-black);
+    width: 100%;
+    border: none;
+    background-color: var(--color-hardBlack-white);
+    box-shadow: none;
+    font-family: inherit;
+  }
+}

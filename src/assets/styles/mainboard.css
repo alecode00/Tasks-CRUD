@@ -1,0 +1,29 @@
+ul {
+  height: 50vh;
+  width: 70%;
+  overflow-y: auto;
+  padding: 2%;
+}
+li {
+  padding: 3%;
+  display: flex;
+  justify-content: space-between;
+}
+.containerButtons {
+  display: flex;
+}
+.mainBoardButtons {
+  margin: 0.5%;
+  color: var(--color-easyBlack-easyBlack);
+  border-radius: 8px;
+  border: 1.75px solid var(--color-easyBlack-easyBlack);
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--color-black-white);
+  cursor: pointer;
+  transition: border-color 0.25s;
+  padding: 4.5%;
+}
+.mainBoardButtons:hover {
+  border-color: var(--color-orange-purple);
+}

@@ -1,0 +1,55 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.light {
+  --color-orange-purple: rgb(148, 42, 148);
+  --color-black-white: white;
+  --color-easyBlack-black: #1a1a1a;
+  --color-black-black: #1a1a1a;
+  --color-white-white: white;
+  --color-hardBlack-hardWhite: rgb(225, 225, 225);
+  --color-mediumBlack-mainWhite: rgb(235, 235, 235);
+  --color-easyBlack-easyBlack: rgb(115, 120, 120);
+  --color-mediumBlack2-white: white;
+  --color-hardBlack-easyBlack: rgb(115, 120, 120);
+  --color-hardOrange-easyPurple: rgb(201, 57, 201);
+  --color-hardBlack-white: white;
+  --color-mediumBlack-mainWhite: rgb(235, 235, 235);
+  --color-white-black: #1a1a1a;
+  --color-easyBlack-hardWhite: rgb(245, 245, 245);
+  --color-mediumBlack2-mainWhite: rgb(235, 235, 235);
+  --color-veryEasyBlack-veryEasyBlack: rgba(185, 185, 185, 0.342);
+  --color-easyOrange-easyPurple: rgb(201, 57, 201);
+  --color-mediumBlack-hardWhite: rgb(245, 245, 245);
+}
+.dark {
+  --color-orange-purple: rgb(255, 90, 29);
+  --color-black-white: #1a1a1a;
+  --color-easyBlack-black: rgb(115, 120, 120);
+  --color-black-black: #1a1a1a;
+  --color-white-white: white;
+  --color-hardBlack-hardWhite: #1c2020;
+  --color-mediumBlack-mainWhite: #232727;
+  --color-easyBlack-easyBlack: rgb(115, 120, 120);
+  --color-mediumBlack2-white: #454545;
+  --color-hardBlack-easyBlack: #1c2020;
+  --color-hardOrange-easyPurple: rgb(190, 51, 0);
+  --color-hardBlack-white: #1c2020;
+  --color-mediumBlack-mainWhite: #232727;
+  --color-white-black: white;
+  --color-easyBlack-hardWhite: rgb(115, 120, 120);
+  --color-mediumBlack2-mainWhite: #454545;
+  --color-veryEasyBlack-veryEasyBlack: rgba(185, 185, 185, 0.342);
+  --color-easyOrange-easyPurple: rgb(244, 129, 74);
+  --color-mediumBlack-hardWhite: #232727;
+}
